@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Spinner from "./Spinner"
 
-export default function QuotePage({fields}) {
+export default ({fields}) => {
 
 	// const {formNumber} = fields
 

@@ -7,14 +7,10 @@ export default function Form({ data }) {
   const { id } = useParams()
   const form = data.find((p) => p.id === id)
 
-  console.log(test)
-
-  // p.id === formId
   useEffect(() => {
     setTest(form)
   }, [form])
 
-  // console.log("setting state in form: ", test)
   let formData
 
   if (form) {

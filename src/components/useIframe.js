@@ -4,7 +4,6 @@ import Spinner from './Spinner'
 export default function UseIframe(props) {
   const { id, title } = props
   const [loading, setLoading] = useState(true)
-  // console.log("id: ", id)
 
   let iframe = () => {
     var ifr = document.getElementById(`JotFormIFrame-${id}`)
@@ -114,18 +113,16 @@ export default function UseIframe(props) {
   return (
     <>
       {loading ? <Spinner /> : null}
-
       <iframe
         id={`JotFormIFrame-${id}`}
         title={title}
         onLoad={handleOnLoad}
-        allowTransparency="true"
-        allowFullScreen="false"
-        allow="geolocation; microphone; camera"
+        allowTransparency={true}
+        allowFullScreen={true}
+        allow={"geolocation; microphone; camera"}
         src={`https://form.jotform.com/${id}`}
-        frameBorder="0"
-        style={{ minWidth: '100%', minHeight: '100vh', border: 'none' }}
-        scrolling="no"
+        frameBorder={"0"}
+        style={{ minWidth: '99vw', minHeight: '100vh', overflow:"hidden" }}
       />
     </>
   )

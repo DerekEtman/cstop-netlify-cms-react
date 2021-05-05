@@ -3,6 +3,7 @@ import data from '../src/data.json'
 import '../src/globalStyles.sass'
 import About from '../src/views/About'
 import Blog from '../src/views/Blog'
+import Clients from '../src/views/Clients'
 import Contact from '../src/views/Contact'
 import Home from '../src/views/Home'
 import Services from '../src/views/Services'
@@ -32,6 +33,9 @@ CMS.registerPreviewTemplate('services-page', ({ entry }) => (
 ))
 CMS.registerPreviewTemplate('about-page', ({ entry }) => (
   <About fields={entry.toJS().data} />
+))
+CMS.registerPreviewTemplate('clients-page', ({ entry }) => (
+  <Clients fields={entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('contact-page', ({ entry }) => (
   <Contact fields={entry.toJS().data} siteTitle={globalSettings.siteTitle} />

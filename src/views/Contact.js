@@ -1,6 +1,12 @@
-import React from 'react'
+import * as emailjs from 'emailjs-com'
+import React, { useEffect, useState } from 'react'
+// import {
+//   GoogleReCaptcha,
+//   GoogleReCaptchaProvider,
+// } from 'react-google-recaptcha-v3'
 import { Link } from 'react-router-dom'
 import Content from '../components/Content'
+import Cta from '../components/Cta'
 import PageHeader from '../components/PageHeader'
 import './Contact.sass'
 
@@ -10,11 +16,65 @@ export default ({ fields }) => {
     subtitle,
     featuredImage,
     email,
-    // workHours,
     applySection,
+    contactCallToAction,
   } = fields
 
   const { applyTitle, applySubtitle, applyBody, applyButton } = applySection
+  const { ctaTitle, ctaBody, ctaButtonText, ctaBackgroundImage } =
+    contactCallToAction ?? ''
+
+  const [formData, setFormData] = useState({})
+
+  // const REACT_APP_RECAPTCHA = process.env.REACT_APP_RECAPTCHA
+
+  useEffect(() => {}, [])
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    sendEmail()
+    setFormData({
+      name: '',
+      email: '',
+      message: '',
+    })
+  }
+
+  const sendEmail = () => {
+    const { name, email, message } = formData
+
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      to_name: 'c-Stop',
+      message_html: message,
+    }
+    emailjs
+      .send(
+        'service_umpcy5n',
+        'cstop_contact_template',
+        templateParams,
+        'user_0Als4WUjD4qGCDjIOuF1L'
+      )
+      .then((resp) => {
+        if (resp.status === 200) {
+          alert('Message Sent.')
+          resetForm()
+        }
+      })
+      .catch((err) => alert('Message failed to send.', err))
+  }
+
+  const resetForm = () => {
+    setFormData({ name: '', email: '', message: '' })
+  }
 
   return (
     <div className="Contact">
@@ -22,6 +82,7 @@ export default ({ fields }) => {
         title={title}
         subtitle={subtitle}
         backgroundImage={featuredImage}
+        opacity="0.6"
       />
 
       <div className="container">
@@ -30,7 +91,8 @@ export default ({ fields }) => {
             <div className="contact-form-heading-wrap">
               <h2 className="contact-heading">Contact us</h2>
               <div className="paragraph-light">
-                We welcome your inquiries, fill out the form below or reach out to us directly.
+                We welcome your inquiries, fill out the form below or reach out
+                to us directly.
                 <a
                   href="mailto:solutions@c-stop.services"
                   target="_blank"
@@ -46,6 +108,8 @@ export default ({ fields }) => {
                 data-name="Get In Touch Form"
                 name="wf-form-Get-In-Touch-Form"
                 className="get-in-touch-form"
+                id="contactForm"
+                onSubmit={handleSubmit}
               >
                 <label htmlFor="name">Name</label>
                 <input
@@ -54,29 +118,42 @@ export default ({ fields }) => {
                   maxLength="256"
                   name="name"
                   data-name="Name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="Enter your name"
-                  id="Name"
+                  id="name"
+                  required
                 />
                 <label htmlFor="Email-2">Email Address</label>
                 <input
                   type="email"
                   className="text-field cc-contact-field input"
                   maxLength="256"
-                  name="Email"
+                  name="email"
                   data-name="Email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="Enter your email"
-                  id="Email"
-                  required=""
+                  id="email"
+                  required
                 />
                 <label htmlFor="Message">Message</label>
                 <textarea
-                  id="Message"
-                  name="Message"
-                  placeholder="Hi there, I’m reaching out because I think we can collaborate…"
-                  maxLength="5000"
-                  data-name="Message"
                   className="text-field cc-textarea cc-contact-field input"
+                  maxLength="5000"
+                  name="message"
+                  data-name="Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Hi there, I’m reaching out because I think we can collaborate…"
+                  id="message"
+                  required
                 ></textarea>
+
+                {/* <GoogleReCaptchaProvider reCaptchaKey={REACT_APP_RECAPTCHA}>
+                  <GoogleReCaptcha />
+                </GoogleReCaptchaProvider> */}
+
                 <input
                   type="submit"
                   value="Submit"
@@ -84,12 +161,6 @@ export default ({ fields }) => {
                   className="Button"
                 />
               </form>
-              {/* <div className="status-message cc-success-message w-form-done">
-                <div>Thank you! Your submission has been received!</div>
-              </div>
-              <div className="status-message cc-error-message w-form-fail">
-                <div>Oops! Something went wrong while submitting the form.</div>
-              </div> */}
             </div>
           </div>
 
@@ -107,6 +178,13 @@ export default ({ fields }) => {
             </div>
           </div>
         </div>
+
+        <Cta
+          title={ctaTitle}
+          body={ctaBody}
+          buttonText={ctaButtonText}
+          backgroundImage={ctaBackgroundImage}
+        />
       </div>
     </div>
   )

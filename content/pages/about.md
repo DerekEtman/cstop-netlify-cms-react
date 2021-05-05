@@ -1,7 +1,7 @@
 ---
 aboutPageHeader:
-  title: Setting New Covid-19 Standards
-  featuredImage: /images/uploads/image-7-.jpeg
+  title: Setting New Compliance Standards
+  featuredImage: /images/uploads/shutterstock_1715308603.jpg
   subtitle: "Family owned and operated by a Local 80 On-Set Medic, LA County: EMT,
     NREMT and an award-winning Producer/Production Manager"
   section1: Our combined credentials, 25+ years of on-set experience, and top tier
@@ -9,11 +9,8 @@ aboutPageHeader:
     safe sets and environments. Our process has proven that the most effective
     COVID-19 Compliance Teams (CCT) come from a collaboration of veteran union
     set-medics, coupled with experienced Producers/Production Managers, with
-    multiple COVID-19 compliance courses and completion certificates between them.
-    We are a one-stop-shop for safe, healthy, and COVID-19 compliant film sets,
-    locations, vehicles, and offices. Our approach closely follows the guidance
-    and recommendations published by the CDC, OSHA, DGA, SAG•AFTRA, TASK FORCE,
-    AICP, IATSE, Local 80, and more.
+    multiple COVID-19 compliance courses and completion certificates between
+    them.
 clientsSection:
   clientImages:
     - companyName: Apple
@@ -45,37 +42,59 @@ clientsSection:
       companyName: Congressional Black Caucus Foundation
     - image: /images/uploads/coverage-insurance-inc-logo.png
       companyName: Coverage Insurance Solutions
-    - image: /images/uploads/parkpictures-logo.jpg
+    - image: /images/uploads/park-pictures.png
       companyName: Park Pictures
+    - companyName: Solomons Productions
+      image: /images/uploads/solomons-productions.png
+    - companyName: FX
+      image: /images/uploads/fx-logo.png
+    - companyName: Wallmart
+      image: /images/uploads/walmart_logo_transparent_png.png
+    - companyName: Spotify
+      image: /images/uploads/spotify-download-logo-30.png
+    - companyName: Amazon
+      image: /images/uploads/amazon-logo.png
+    - companyName: Partizan
+      image: /images/uploads/partizan-logo.svg.png
+    - companyName: Freenjoy
+      image: /images/uploads/freenjoy.png
+    - companyName: MJZ
+      image: /images/uploads/mjz_bzgm9bz.png
+    - companyName: Prettybird
+      image: /images/uploads/prettybird.png
+    - companyName: VW
+      image: /images/uploads/volkswagen-logo-2019-1500x1500.png
+    - companyName: Even Odd
+      image: /images/uploads/even-odd.png
 section2Container:
-  section2Title: Compliance done right
-  section2: "We are trailblazers. Our action plans, techniques, and methodologies
-    not only follow the protocols and guidelines that prevent the transmission of
-    infectious diseases including COVID-19, but hold us to a higher standard that
-    keeps your set safe beyond expectations. Our world-class team works with our
-    clients side-by-side (6’-10’ apart, of course) from tech scout to wrap, which
-    has provided us with an invaluable understanding and practical application of
-    safety standards on set. We pass this knowledge on by consulting and crafting
-    unique compliance packages to fit any project’s needs. Want a second opinion?
-    Here are a few satisfied customers:"
+  section2Title: Compliance Done Right
+  section2: We are trailblazers. Our action plans, techniques, and methodologies
+    not only follow the protocols and guidelines that prevent the transmission
+    of pathogens and infectious diseases including COVID-19, but hold us to a
+    higher standard that keeps your set safe beyond expectations. Our
+    world-class team works with our clients side-by-side (6’-10’ apart, of
+    course) from tech scout to wrap, which has provided us with an invaluable
+    understanding and practical application of safety standards on set. We pass
+    this knowledge on by consulting and crafting unique compliance packages to
+    fit any project’s needs.
 testimonialSection:
   testimonialTitle: Testimonials
-  testimonialSubtitle: Hear it from our clients
+  testimonialSubtitle: "Want a second opinion? Here are a few satisfied customers:"
   clientTestimonials:
     - clientCompany: SAMM Media
       clientName: André de la Cruz
       clientTestimonial: My AD introduced me to Josh and Pepper for my July 27th TV
         commercial in Los Angeles. As we went through the planning stages of my
-        shoot, I was impressed with their capabilities and knowledge of the health
-        and safety standards as outlined by the unions. Plus, it’s super
+        shoot, I was impressed with their capabilities and knowledge of the
+        health and safety standards as outlined by the unions. Plus, it’s super
         advantageous to have Pepper with a production background and Josh a set
-        medic – they are the perfect combo running your production HSS team. They
-        pay close attention to the details and plan to the minutia to make sure
-        your shoot goes as planned. They worked with us closely to make sure we
-        formulated a production plan from check-in, identifying department pods,
-        breakfast and lunch areas, crew zoning and access, and 12+ hours of
-        overall sanitation. My crew and I enjoyed having them and thankful for
-        keeping us healthy, clean, and safe!
+        medic – they are the perfect combo running your production HSS team.
+        They pay close attention to the details and plan to the minutia to make
+        sure your shoot goes as planned. They worked with us closely to make
+        sure we formulated a production plan from check-in, identifying
+        department pods, breakfast and lunch areas, crew zoning and access, and
+        12+ hours of overall sanitation. My crew and I enjoyed having them and
+        thankful for keeping us healthy, clean, and safe!
     - clientCompany: Altered.LA
       clientName: Marcos Cline
       clientTestimonial: Pepper is an expert in the production of top tier commercials
@@ -87,20 +106,20 @@ testimonialSection:
     - clientCompany: Squint
       clientName: Rob Clyde
       clientTestimonial: Pepper has production supervised many jobs for me over the
-        years AND produced my last campaign for the Heavenly Ski Resort where our
-        crew of 50 shot on skis in the mountains of Tahoe over multiple days the
-        last week before nationwide quarantines. Pepper & Josh ensured that we
-        were all safe and well informed – and the shoot was seamless.
+        years AND produced my last campaign for the Heavenly Ski Resort where
+        our crew of 50 shot on skis in the mountains of Tahoe over multiple days
+        the last week before nationwide quarantines. Pepper & Josh ensured that
+        we were all safe and well informed – and the shoot was seamless.
     - clientCompany: DGA 1st AD
       clientName: Erik Marshall
       clientTestimonial: >-
-        I was involved in the pre-production of a commercial with celebrity talent
-        that we were going to be shooting at the celebrity's house. As with any
-        job shooting in these unprecedented times, our main focus in planning was
-        the safety of the entire cast and crew. We knew we needed a very strong
-        Covid Compliance Team (CCT). Choosing the right CCT can be tricky right
-        now, as a large number of unqualified people have announced themselves as
-        Covid Compliance Officers. 
+        I was involved in the pre-production of a commercial with celebrity
+        talent that we were going to be shooting at the celebrity's house. As
+        with any job shooting in these unprecedented times, our main focus in
+        planning was the safety of the entire cast and crew. We knew we needed a
+        very strong Covid Compliance Team (CCT). Choosing the right CCT can be
+        tricky right now, as a large number of unqualified people have announced
+        themselves as Covid Compliance Officers. 
 
 
         Hiring a team comprised partially of an experienced Producer/Production Manager and on-set Medic/EMT made a great deal of sense. They would be able to approach our location with proactive insight and thorough diligence and professionalism. They were in constant communication with the production team and were able to help guide us through the planning in a way that would make sure that all of the safety protocols would be satisfied. This included working with production and the AD as to how/where we would set up our pods & lunch, what specific gear would be required, and how to fortify the location to become a safe bubble. 
@@ -158,32 +177,88 @@ testimonialSection:
 teamMemberSection:
   teamMembers:
     - name: Pepper Humphrey
-      employeeTitle: CEO
-      employeePicture: /images/uploads/pepper-book-photo.jpg
-      employeeQuote: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-        nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla
-        quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent
-        mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum
-        lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent
-        per conubia nostra, per inceptos himenaeos.
-    - name: Kia Kiso
-      employeePicture: /images/uploads/kia_kiso.jpg
-      employeeTitle: "  "
-      employeeQuote: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
-        Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at
-        nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec
-        tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget
-        nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-        per inceptos himenaeos. \
-
-        \
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+      employeeTitle: Co-Founder, CEO, H&S Director, CCO
+      employeePicture: /images/uploads/b7ab9050-0f51-4723-aa98-92fbe7fcfb25.jpg
+      employeeQuote: Co-Founder, CEO, H&S Director, CCO
+    - name: Josh Humphrey
+      employeeTitle: Co-Founder, Field Operations, Medic, CCO
+      employeeQuote: Co-Founder, Field Operations, Medic, CCO
+      employeePicture: /images/uploads/josh-h.jpeg
+    - name: Elle West
+      employeeTitle: Project Manager, CCO
+      employeePicture: /images/uploads/dfeb008c-072d-483c-b020-39c486828a7f.jpg
+      employeeQuote: With a background in the talent world, Elle is known for her
+        professionalism amongst top clientele for print, editorial, commercial,
+        and TV.  Medically trained and skilled in project management, Elle leads
+        teams with efficiency and tact.
+    - name: Patrick Clements
+      employeeTitle: Executive Assistant, CCO
+      employeePicture: /images/uploads/commercial-headshot.jpg
+      employeeQuote: Patrick takes pride in creating nimble plans with certainty in
+        this time of reimagining. He has brought 46 events from concept to
+        completion, managed over 120 experiential marketing activations across
+        the country and loves to hunt the devil in the details.
+    - name: Ariel Lazarus
+      employeeTitle: Project Manager, CCO
+      employeeQuote: Ariel boasts 13 years of experience on both sides of the camera
+        and holds a unique understanding of the production process.  She also
+        holds a master's degree in Industrial Engineering, focused on system
+        processes and project management.
+      employeePicture: /images/uploads/ariel-l.jpeg
+    - name: Josh Saathoff
+      employeeTitle: Project Manager, CCO
+      employeeQuote: Project Manager, CCO
+      employeePicture: /images/uploads/1549480668925.jpg
+    - name: Ian Menzies
+      employeeTitle: Administrative Coordinator, CCO
+      employeeQuote: Administrative Coordinator, CCO
+      employeePicture: /images/uploads/ian.jpeg
+    - name: Steve Liskiewicz
+      employeeTitle: Field Testing Officer, CCO, CCM, Sani-tech
+      employeeQuote: Field Testing Officer, CCO, CCM, Sani-tech
+      employeePicture: /images/uploads/steve-liskiewicz.jpg
+    - name: Eric Stitt
+      employeeTitle: Safety Compliance Specialist, CCO, Sani-tech
+      employeeQuote: Safety Compliance Specialist, CCO, Sani-tech
+      employeePicture: /images/uploads/eric-stitt.png
+    - name: Christina Holleran
+      employeeTitle: Safety Compliance Specialist, CCO, Sani-tech
+      employeeQuote: Safety Compliance Specialist, CCO, Sani-tech
+      employeePicture: /images/uploads/christina-holleran.png
+    - name: Chris Hamilton
+      employeeTitle: Safety Compliance Specialist, CCO, Sani-tech
+      employeeQuote: Safety Compliance Specialist, CCO, Sani-tech
+      employeePicture: /images/uploads/christopher-hamilton.jpeg
+    - name: Michael Rivera
+      employeeTitle: Safety Compliance Specialist, CCO, Sani-tech
+      employeeQuote: Safety Compliance Specialist, CCO, Sani-tech
+      employeePicture: /images/uploads/jesus-rivera.jpg
+    - name: Michele Hill
+      employeeTitle: Field Testing Manager, CCO
+      employeeQuote: Field Testing Manager, CCO
+      employeePicture: /images/uploads/michele-hill.jpeg
+    - name: Lori May
+      employeeTitle: Medic, CCO, HSS
+      employeeQuote: Medic, CCO, HSS
+      employeePicture: /images/uploads/img_0174.jpg
+    - name: Mark Erman
+      employeeTitle: Medic, CCO
+      employeePicture: /images/uploads/mark-erman.jpeg
+      employeeQuote: Medic, CCO
+    - name: Joe Bravo
+      employeeTitle: Medic, CCO
+      employeePicture: /images/uploads/unknown.jpeg
+      employeeQuote: Medic, CCO
 imageGallery:
   - description: Test, Not featured
     image: /images/uploads/isabella juskova.jpg
   - description: Test, featured
     featured: true
     image: /images/uploads/tim-marshall-155597.jpg
+aboutCallToAction:
+  ctaBackgroundImage: /images/uploads/card-og.png
+  ctaTitle: Minimize the risk of pathogens and infectious diseases, including
+    COVID-19, on your projects
+  ctaBody: With our informed leaders and trained COVID-19 teams, You can minimize the risk of bringing an infection home.
+  ctaButtonText: Ask Our Team
 ---

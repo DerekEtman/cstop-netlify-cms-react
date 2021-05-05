@@ -1,31 +1,18 @@
+.Home
+	flex-grow: 1	
 .intro-header
-	display: -webkit-box
-	display: -webkit-flex
-	display: -ms-flexbox
-	display: flex
-	flex-flow: column
-	height: 99vh
-	-webkit-box-pack: center
-	-webkit-justify-content: center
-	-ms-flex-pack: center
-	justify-content: center
-	-webkit-box-align: center
-	-webkit-align-items: center
-	-ms-flex-align: center
-	align-items: center
-	background-position: 50%
-	background-size: cover
-	background-attachment: fixed
-	color: black
+	position: relative
+	height: fit-content
+	text-align: center
 
-#myVideo
-  position: absolute
-  right: 0
-  bottom: 0
-  min-width: 100%
-  min-height: 100%
-  z-index: 0
-  filter: brightness(40%)
+video
+	object-fit: cover
+	width: 100vw
+	height: 100vh
+	position: fixed
+	top: 0
+	left: 0
+	filter: brightness(40%)
 
 .intro-logo
 	width: 55%
@@ -40,19 +27,20 @@
 	max-width: 1140px
 	text-align: center
 	margin: 0 auto
+	margin-top: 3rem
 
 .intro-text
-	width: 80%
+	// width: 80%
 	margin-right: auto
 	margin-bottom: 35px
 	margin-left: auto
 	padding: 2rem
 	color: white
+.intro-paragraph
+	text-align: justify
+	
 
-.intro-subsection
-	width: 80%
-	z-index: 1
-
+	
 .logoText
 	max-width: 300px
 	width: 100%
@@ -61,8 +49,28 @@
 	max-width: 160px
 	width: 100%
 
-.subsection-client
+.subsection
+	flex-direction: column
+
+
+.intro-subsection
+	width: 80%
+	z-index: 1
+	background-color: #ffffff56
+	border-radius: 5px
+
+.subsection-client-logos
+	margin-top: 2rem
 	width: 100% 
+
+.intro-client-logo
+	// border: 1px solid green
+	max-height: 100px
+	// min-width: 100px
+	width: auto
+	height: auto
+	margin: auto
+	align-self: center
 
 @media screen and (max-width: 991px)
 	.intro-text
@@ -70,7 +78,7 @@
 @media screen and ( max-width: 500px )
 	.intro-content
 		width: 100%
-		margin-top: 50px
+		margin-top: 3rem
 	.intro-subtitle
 		font-size: 16px
 	.logoImage

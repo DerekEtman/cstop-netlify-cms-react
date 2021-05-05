@@ -4,6 +4,7 @@
   "private": true,
   "devDependencies": {
     "chokidar-cli": "^2.0.0",
+    "emailjs-com": "^2.6.4",
     "glob": "^7.1.4",
     "gray-matter": "^4.0.2",
     "heml": "^1.1.3",
@@ -22,6 +23,10 @@
     "sw-precache": "^5.2.0"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@material-ui/core": "^4.11.3",
     "@researchgate/react-intersection-observer": "^1.0.1",
     "aos": "^2.3.4",
     "axios": "^0.21.1",
@@ -39,8 +44,11 @@
     "react-burger-menu": "^3.0.2",
     "react-dom": "^16.9.0",
     "react-feather": "^2.0.3",
+    "react-google-recaptcha-v3": "^1.8.0",
     "react-helmet": "^5.2.1",
     "react-markdown": "4.2.2",
+    "react-player": "^2.9.0",
+    "react-recaptcha": "^2.3.10",
     "react-router-dom": "^5.0.1",
     "react-slick": "^0.27.13",
     "react-tiger-transition": "^4.1.2",

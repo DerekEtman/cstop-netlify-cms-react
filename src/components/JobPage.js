@@ -117,8 +117,8 @@ export default () => {
         allow="geolocation; microphone; camera"
         src="https://form.jotform.com/203647725897067"
         frameBorder="0"
-        style={{ minWidth: '100%', minHeight: '100vh', border: 'none' }}
-        scrolling="no"
+        style={{ minWidth: '100%', minHeight: '100vh',height:"100%", border: 'none' }}
+        scrolling="yes"
       ></iframe>
     </div>
   )

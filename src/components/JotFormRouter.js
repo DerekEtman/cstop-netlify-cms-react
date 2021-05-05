@@ -21,6 +21,15 @@ export default function FormsPage(props, { match }) {
 		// eslint-disable-next-line
 	}, []);
 	let apiKey = process.env.REACT_APP_JOTFORM_API_READ;
+	console.log("api key: ", apiKey)
+
+	// let FormArray = formList.map((form) => {
+	// 	return (
+	// 		<>
+	// 			<Link to={`${url}/${form.id}`}>{form.title}</Link>
+	// 		</>
+	// 	);
+	// });
 
 	const handleFormSearch = (event) => {
 		props.history.push(`/forms/${findForm}`);

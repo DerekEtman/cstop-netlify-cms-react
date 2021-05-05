@@ -1,16 +1,16 @@
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import uniqueId from "lodash/uniqueId"
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Slider from 'react-slick'
-import './Home.sass'
-import uniqueId from "lodash/uniqueId"
+import Content from "../components/Content"
 import LazyImage from '../components/LazyImage'
+import './Home.sass'
 
 export default ({ fields }) => {
   const {
     // title,
     subtitle,
+    paragraph,
     buttonText,
     buttonLinkTo,
     // featuredImage,
@@ -21,26 +21,32 @@ export default ({ fields }) => {
 
   const { carouselTitle, featuredClientsLogos } = featuredClients
 
-  AOS.init()
+
 
   const settings = {
-    fade: true,
     infinite: true,
     autoplay: true,
-    speed: 1500,
-    autoplaySpeed: 4500,
+    speed: 1000,
+    autoplaySpeed: 3500,
     cssEase: 'linear',
     dots: false,
     arrows: false,
-    // vertical: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      }
+    ]
   }
 
   return (
     <main className="Home" >
-      {/* Import starts here */}
-      <video muted loop autoPlay id="myVideo">
+      <video playsInline muted loop autoPlay id="myVideo">
         <source src="/images/Film-set.mp4" type="video/mp4" />
       </video>
 
@@ -70,8 +76,9 @@ export default ({ fields }) => {
             className="intro-text"
             style={{ overflow: 'hidden' }}
           >
-            <div className="paragraph-bigger cc-bigger-white-light">
-              <h5 className="intro-subtitle">{subtitle}</h5>
+            <div className="cc-bigger-white-light">
+              <h5><Content source={subtitle} className="intro-subtitle"/></h5>
+              <Content source={paragraph} className="intro-paragraph"/>
               <br />
             </div>
             <Link to={buttonLinkTo} className="Button inline-block">
@@ -87,13 +94,14 @@ export default ({ fields }) => {
         >
           <div className="divider"></div>
 
-          <div
+          <a
             className="label cc-light subsection"
-            style={{ textTransform: 'uppercase', color: 'white' }}
+            style={{ textTransform: 'uppercase', color: 'white' , textDecoration:"none" }}
+            href="/about/clients"
           >
-            <h4>{carouselTitle}</h4>
+            <h4 style={{alignSelf:"flex-start"}}>{carouselTitle}</h4>
 
-            <div className="subsection-client">
+            <div className="subsection-client-logos">
               <Slider {...settings}>
                 {featuredClientsLogos.map((image) => {
                   return (
@@ -102,12 +110,13 @@ export default ({ fields }) => {
                       src={image.companyLogo}
                       alt={image.companyName}
                       key={uniqueId(`ft_${image.companyName}_`)}
+                      className="intro-client-logo"
                     />
                   )
                 })}
               </Slider>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </main>

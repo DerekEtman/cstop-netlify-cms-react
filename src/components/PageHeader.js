@@ -10,18 +10,23 @@ const PageHeader = ({
   subtitle,
   backgroundImage,
   large,
-  className = ''
+  className = '',
+  opacity,
 }) => {
   if (large) className += ' PageHeader-large'
+
   return (
     <div className={`PageHeader relative ${className}`}>
       {backgroundImage && (
-        <BackgroundImage src={backgroundImage} opacity={0.4} />
+        <BackgroundImage
+          src={backgroundImage}
+          opacity={opacity ? opacity : '0.4'}
+        />
       )}
-      <div className='container relative'>
-        <h1 className='PageHeader--Title'>{title}</h1>
+      <div className="container relative">
+        <h1 className="PageHeader--Title">{title}</h1>
         {subtitle && (
-          <Content className='PageHeader--Subtitle' src={subtitle} />
+          <Content className="PageHeader--Subtitle" src={subtitle} />
         )}
       </div>
     </div>
@@ -29,7 +34,7 @@ const PageHeader = ({
 }
 PageHeader.propTypes = {
   title: PropTypes.string,
-  subtitle: PropTypes.string
+  subtitle: PropTypes.string,
 }
 
 export default PageHeader

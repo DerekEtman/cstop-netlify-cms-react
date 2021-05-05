@@ -1,0 +1,87 @@
+.Clients
+    margin: 0 auto
+    min-height: 90vh
+
+.clients-nav-container
+    width: 90%
+    margin: 0 auto
+    display: flex
+    align-items: baseline
+    flex-flow: row nowrap
+    & h3
+        opacity: 0.6
+        font-weight: 700
+        font-size: 40px
+
+.clients-nav-buttons
+    display: flex
+    flex-flow: row wrap
+    margin: 0 auto
+    align-items: center
+    justify-content: flex-end
+    // &::before
+    //     content: "Clients"
+    //     opacity: 0.6
+    //     font-weight: 700
+    //     width: 100%
+    //     font-size: 40px
+        
+
+.client-nav-button
+    color: #222222
+    font-family: Open Sans, sans-serif
+    text-decoration: none
+    text-transform: uppercase
+    cursor: pointer
+    opacity: 0.6
+    margin: .5rem 1rem
+    white-space: nowrap
+
+.selected
+    border-bottom: 3px solid #fd8d00
+    font-weight: bold
+    // border-bottom-width: 0
+
+    transform: border-bottom-width(100%) 2s
+
+
+
+.client-logo-grid
+    display: grid
+    align-items: center
+    justify-content: center
+    margin-top: 4rem
+    column-gap: 10px
+    row-gap: 15px
+    animation: anim .5s ease-in-out 
+
+.client-logo
+    max-height: 200px
+    width: auto
+    place-self: center
+    margin-bottom: 0
+    padding: 10px
+
+@media screen and (max-width: 479px)
+    .clients-nav-container
+        flex-direction: column
+        width: 90%
+
+    .clients-nav-buttons
+        flex-wrap: wrap
+        width: 90%
+        margin: 0 auto
+
+@keyframes anim
+    0%
+        display: none
+        opacity: 0
+
+    1%
+        display: block
+        opacity: 0
+        // transform: scale(.7)
+
+    100%
+        opacity: 1
+        // transform: scale(1)

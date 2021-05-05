@@ -10,6 +10,8 @@ require("dotenv").config();
 const rootEl = document.getElementById('root')
 render(<App />, rootEl)
 
+// console.log(module);
+
 if (module.hot) {
   module.hot.accept('./App', () => {
     const NextApp = require('./App').default

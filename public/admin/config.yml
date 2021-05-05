@@ -4,7 +4,7 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 
 local_backend: true
-
+publish_mode: editorial_workflow
 display_url: https://c-stop.services # This url will display in the top-right of the CMS
 logo_url: "https://img1.wsimg.com/isteam/ip/ed5636f7-286d-4b3d-a73f-e498eaca3946/C-Stop_TM.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25"
 
@@ -36,6 +36,17 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Subtitle, name: applySubtitle, widget: string}
               - {label: Body, name: applyBody, widget: markdown}
               - {label: Button Text, name: applyButton, widget: text }
+          - label: "Contact - Call to Action"
+            required: false
+            name: "contactCallToAction"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: Title, name: ctaTitle, widget: string, default: "Minimize the risk of Covid-19 on your projects" , required: false}
+              - {label: Body, name: ctaBody, widget: markdown, required: false}
+              - {label: Button Text, name: ctaButtonText, widget: string, required: false}
+              # - {label: Background Image, name: ctaBackgroundImage, widget: image, required: false }
+
           - label: "Meta"
             required: false
             name: "meta"
@@ -97,6 +108,7 @@ collections: # A list of collections the CMS should be able to edit
                 collapsed: true
                 fields:
                   - {label: Title, name: title, widget: string}
+                  - {label: Icon Image, name: serviceIconImage, widget: image, required: false}
                   - {label: Body, name: body, widget: markdown, required: false}
                   
               - {label: Below Services Title, name: belowServicesTitle, widget: string}
@@ -124,9 +136,8 @@ collections: # A list of collections the CMS should be able to edit
             fields:
             - {label: Title, name: title, widget: string}
             - {label: Featured Image, name: featuredImage, widget: image}
-            - {label: Subtitle, name: subtitle, widget: string}
-            - {label: Section 1, name: section1, widget: markdown}
-
+            - {label: Subtitle, name: subtitle, widget: string, required: false}
+            - {label: Section 1, name: section1, widget: markdown, required: false}
 
           - label: "Clients Section"
             name: "clientsSection"
@@ -184,11 +195,23 @@ collections: # A list of collections the CMS should be able to edit
           - label: "Image Gallery"
             name: "imageGallery"
             widget: "list"
+            required: false
             minimize_collapsed: true
             fields:
               - {label: Description, name: description, widget: string}
               - {label: Image, name: image, widget: image}
               - {label: Featured?, name: featured, widget: boolean, required: false }
+
+          - label: "About - Call to Action"
+            required: false
+            name: "aboutCallToAction"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: Title, name: ctaTitle, widget: string, default: "Minimize the risk of Covid-19 on your projects" , required: false}
+              - {label: Body, name: ctaBody, widget: markdown, required: false}
+              - {label: Button Text, name: ctaButtonText, widget: string, default: "Request an estimate", required: false}
+              # - {label: Background Image, name: ctaBackgroundImage, widget: image, required: false }
 
           - label: "Meta"
             collapsed: true
@@ -202,6 +225,53 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Noindex, name: noindex, widget: boolean, required: false}
 
           
+      - file: "content/pages/clients.md"
+        label: "Clients Page"
+        name: "clients-page"
+        minimized_collapsed: true
+        fields:
+          - label: "Brands"
+            name: brandLogos
+            collapsed: true
+            widget: list
+            fields:
+              - {label: Company Name, name: brandName, widget: string}
+              - {label: Company Logo, name: brandLogo, widget: image}
+          - label: "Production Companies"
+            name: productionCompanyLogos
+            collapsed: true
+            widget: list
+            fields:
+              - {label: Company Name, name: brandName, widget: string}
+              - {label: Company Logo, name: brandLogo, widget: image}
+          - label: "Industry Leaders and Unions"
+            name: industryLogos
+            collapsed: true
+            widget: list
+            fields:
+              - {label: Company Name, name: brandName, widget: string}
+              - {label: Company Logo, name: brandLogo, widget: image}
+          - label: "Health Organization"
+            name: healthLogos
+            collapsed: true
+            widget: list
+            fields:
+              - {label: Company Name, name: brandName, widget: string}
+              - {label: Company Logo, name: brandLogo, widget: image}
+
+      - file: "content/pages/videos.md"
+        label: "Clients Videos Page"
+        name: clients-videos
+        minimize_collapsed: true
+        widget: object
+        fields:
+          - label: "VideoList"
+            widget: list
+            name: videoList
+            fields:
+              - {label: Client Name, name: clientName, widget: string}
+              - {label: Video Thumbnail, name: clientVideoThumbnail, widget: image, optional: true}
+              - {label: Video Url, name: clientVideoURL, widget: string}
 
       - file: "content/pages/home.md"
         label: "Home Page"
@@ -210,6 +280,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Title, name: title, widget: string}
           - {label: Featured Image, name: featuredImage, widget: image}
           - {label: Subtitle, name: subtitle, widget: markdown}
+          - {label: Paragraph, name: paragraph, widget: markdown, required: false}
           - {label: Button Text, name: buttonText, widget: string}
           - {label: Button Links to, name: buttonLinkTo, widget: string}
           - label: "Featured Clients"
@@ -222,7 +293,7 @@ collections: # A list of collections the CMS should be able to edit
               widget: list
               fields:
                 - {label: Company Name, name: companyName, widget: string}
-                - {label: Company Logo, name: companyLogo, widget: image, description: test description}
+                - {label: Company Logo, name: companyLogo, widget: image, }
           - label: "Meta"
             collapsed: true
             required: false

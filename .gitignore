@@ -14,5 +14,6 @@ build
 npm-debug.log
 .env*.local
 *error.log
+.env
 
 src/data.json

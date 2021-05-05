@@ -10,12 +10,14 @@ import Testimonials from '../components/Testimonials'
 import './About.sass'
 
 export default ({ fields }) => {
+  // console.log(fields)
   const {
     aboutPageHeader,
     clientsSection,
     section2Container,
     teamMemberSection,
     testimonialSection,
+    aboutCallToAction,
   } = fields
   const { section1, title } = aboutPageHeader
   const { clientImages } = clientsSection
@@ -27,17 +29,7 @@ export default ({ fields }) => {
     testimonialTitle,
   } = testimonialSection
 
-  // const settings = {
-  //   dots: true,
-  //   infinite: true,
-  //   swipeToSlide: true,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   autoplay: true,
-  //   speed: 500,
-  //   lazyLoad: true,
-  //   cssEase: 'linear',
-  // }
+  const { ctaTitle, ctaBody, ctaButtonText, ctaBackgroundImage} = aboutCallToAction?? "";
 
   const root = document.documentElement
 
@@ -58,7 +50,11 @@ export default ({ fields }) => {
         className="about-header"
       />
 
-      <div className="snap container">
+      <div
+        className="snap container section"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
         <div className="section-heading-wrap">
           <h2>
             Our world-class team
@@ -73,12 +69,16 @@ export default ({ fields }) => {
       </div>
 
       <div className="snap section">
-        <div className="about-content">
+        <div className="about-content" data-aos="fade-up" data-aos-delay="200">
           <p className="heading-jumbo-small">{section2Title}</p>
           <Content className="paragraph-smaller" source={section2} />
         </div>
 
-        <div className="testimonial-container">
+        <div
+          className="testimonial-container"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <div className="section-heading-wrap">
             <div className="label cc-light">{testimonialSubtitle}</div>
             <div
@@ -102,35 +102,22 @@ export default ({ fields }) => {
         </div>
       </div>
 
-      <div className="snap about-client-container ">
+      <div
+        className="snap about-client-container section "
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
         <ClientLogos data={clientImages} />
       </div>
-      {/* <div className="section-3">
-        <div className="section-heading-wrap">
-          <h2>
-            See Us In Action
-            <br />
-          </h2>
-        </div>
 
-        <div>
-          <Slider {...settings}>
-            <div><img src={cStopPerson} alt="PlaceHolder " /></div>
-            {imageGallery.map(({ image, description }) => {
-              return (
-                <img
-                  className="image-gallery-src"
-                  src={image}
-                  alt={description}
-                />
-              )
-            })}
-          </Slider>
-        </div>
-      </div> */}
-
-      <div className="snap Cta">
-        <Cta />
+      <div
+        id="cta-wrapper"
+        className="snap Cta"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-anchor-placement="#cta-wrapper"
+      >
+        <Cta title={ctaTitle} body={ctaBody} buttonText={ctaButtonText} backgroundImage={ctaBackgroundImage}/>
       </div>
     </div>
   )

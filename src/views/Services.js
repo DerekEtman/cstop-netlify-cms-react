@@ -1,8 +1,8 @@
-import React from 'react'
-import PageHeader from '../components/PageHeader'
-import Content from '../components/Content'
-import './Services.sass'
 import { uniqueId } from 'lodash'
+import React from 'react'
+import Content from '../components/Content'
+import PageHeader from '../components/PageHeader'
+import './Services.sass'
 
 export default ({ fields }) => {
   const { title, subTitle, featuredImage, section1, section2 } = fields
@@ -31,6 +31,8 @@ export default ({ fields }) => {
         title={title}
         subtitle={subTitle}
         backgroundImage={featuredImage}
+        className="service-header"
+        opacity="0.8"
       />
 
       <div className="container">
@@ -43,6 +45,7 @@ export default ({ fields }) => {
       <div
         className="section service-container"
         style={{ backgroundImage: { backgroundImage } }}
+        data-aos="fade-up"
       >
         <div className="container ">
           <div className="section-heading-wrap">
@@ -54,11 +57,15 @@ export default ({ fields }) => {
           <div className="our-services-grid">
             {smallSections.map((card) => {
               return (
-                <div key={uniqueId(`sv_`)}>
+                <div key={uniqueId(`sv_`)} className="service-card" >
                   <img
-                    src="images/Icon-1.svg"
-                    width="50"
-                    alt=""
+                    src={
+                      card.serviceIconImage
+                        ? card.serviceIconImage
+                        : 'images/Icon-1.svg'
+                    }
+                    width="100"
+                    alt={`Badge looking icon with ${card.title} written on it`}
                     className="service-icon"
                   />
                   <div className="paragraph-bigger">{card.title}</div>

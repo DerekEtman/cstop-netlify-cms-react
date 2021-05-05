@@ -127,6 +127,7 @@
 	font-weight: 600
 	letter-spacing: 1px
 	text-transform: uppercase
+	cursor: pointer
 .navigation-item:hover
 	opacity: 0.9
 	font-size: 15px
@@ -135,6 +136,35 @@
 .navigation-item:active
 	opacity: 0.9
 	color: #fd8d00
+
+.subnav
+	overflow: hidden
+
+	i
+		width: 100%
+		color: black
+		border: 1px solid green
+	&:hover .subnav-content
+		display: block
+
+.subnav-container
+	display: none
+		
+.show 
+	display: block
+
+.subnav-content
+	display: none
+	position: absolute
+	min-width: fit-content
+	z-index: 1
+	background-color: white
+
+
+.subnav-item
+	text-decoration: none
+	margin: 0 
+	padding: 10px 40px
 
 @media screen and (max-width: 991px)
 
